@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./styles/app.module.css";
+import FormComponent from "./Components/FormComponent";
+import DisplayComponent from "./Components/DisplayComponent";
+import { useState } from "react";
+import { UserContextWrapper } from "./context/UserContext";
 
 function App() {
+  const [Edit, setEdit] = useState({ isEdit: false, id: "" });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextWrapper>
+      <div className={styles.appWrapper}>
+        <FormComponent setEdit={setEdit} Edit={Edit} />
+        <DisplayComponent setEdit={setEdit} Edit={Edit} />
+      </div>
+    </UserContextWrapper>
   );
 }
 

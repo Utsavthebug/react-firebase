@@ -1,0 +1,51 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.formWrapper {
+  margin-bottom: 10px;
+}
+
+.label {
+  margin-bottom: 4px;
+  display: block;
+}
+
+.inputLabel {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.inputLabel:focus {
+  outline: none;
+}
+
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtn {
+  background-color: rgb(32, 153, 32);
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+}
+
+.Image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
